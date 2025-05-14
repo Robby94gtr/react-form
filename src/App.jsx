@@ -1,6 +1,6 @@
 import { useState } from 'react'
 
-const articoli =[
+const articoli = [
   {
     id: 1,
     title: "Titolo 1"
@@ -36,12 +36,17 @@ function App() {
           <ul className="list group">
             {articoli.map((articolo) => {
               return (
-                <li className="list-group-item"key={articolo.id}>
+                <li className="list-group-item" key={articolo.id}>
                   {articolo.title}
                 </li>
               );
             })}
           </ul>
+          <form>
+            <div className='input-group mb-3'>
+              <input type="text" className='form-control' placeholder='Nuovo articolo' />
+            </div>
+          </form>
         </div>
       </div>
     </div>
