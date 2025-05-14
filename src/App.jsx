@@ -27,9 +27,24 @@ function App() {
 
 
   return (
-
-    <h1>Hello World</h1>
-
+    <div className="container">
+      <div className="row gy-4">
+        <div className="col-12">
+          <h1>React Form Blog</h1>
+        </div>
+        <div className="col-12">
+          <ul className="list group">
+            {articoli.map((articolo) => {
+              return (
+                <li className="list-group-item"key={articolo.id}>
+                  {articolo.title}
+                </li>
+              );
+            })}
+          </ul>
+        </div>
+      </div>
+    </div>
   )
 }
 
